@@ -1,0 +1,159 @@
+
+<!DOCTYPE html>
+<html lang="en">
+<head>
+  <meta charset="UTF-8" />
+  <meta name="viewport" content="width=device-width, initial-scale=1" />
+  <title>My Portfolio — Home</title>
+  <meta name="description" content="Personal portfolio homepage" />
+  <style>
+    :root{
+      --bg:#0b0f17;
+      --card:#111826;
+      --text:#e6e8ee;
+      --muted:#b3b9c6;
+      --accent:#5b8cff;
+      --accent-2:#7af0d1;
+    }
+    *{box-sizing:border-box}
+    body{
+      margin:0;
+      font-family: system-ui, -apple-system, Segoe UI, Roboto, Ubuntu, Cantarell, Noto Sans, Helvetica, Arial, "Apple Color Emoji","Segoe UI Emoji";
+      color:var(--text);
+      background: radial-gradient(1200px 800px at 80% -10%, rgba(90,140,255,.2), transparent),
+                  radial-gradient(800px 600px at -10% 110%, rgba(122,240,209,.18), transparent),
+                  var(--bg);
+      line-height:1.5;
+    }
+    a{color:var(--text); text-decoration:none}
+    .container{max-width:1100px; margin:0 auto; padding:24px}
+    header{
+      position:sticky; top:0; z-index:10;
+      background: linear-gradient(180deg, rgba(11,15,23,.9), rgba(11,15,23,.75));
+      backdrop-filter: blur(8px);
+      border-bottom:1px solid rgba(255,255,255,.06);
+    }
+    .nav{
+      display:flex; align-items:center; justify-content:space-between; gap:12px;
+    }
+    .brand{font-weight:800; letter-spacing:.5px}
+    .nav a{opacity:.9}
+    .nav .links{display:flex; gap:16px; align-items:center}
+    .btn{
+      display:inline-block; padding:10px 14px; border-radius:12px;
+      border:1px solid rgba(255,255,255,.14);
+      background:linear-gradient(180deg, rgba(255,255,255,.06), rgba(255,255,255,.02));
+      transition:.2s transform,.2s background,.2s border-color;
+    }
+    .btn:hover{transform:translateY(-1px); border-color:rgba(255,255,255,.28)}
+    .accent{border-color:rgba(91,140,255,.6); background:linear-gradient(180deg, rgba(91,140,255,.25), rgba(91,140,255,.15));}
+    .hero{
+      display:grid; grid-template-columns:1.2fr .8fr; gap:28px; align-items:center;
+      padding:56px 0;
+    }
+    .card{
+      background:linear-gradient(180deg, rgba(255,255,255,.06), rgba(255,255,255,.02));
+      border:1px solid rgba(255,255,255,.12);
+      border-radius:20px; padding:22px;
+      box-shadow: 0 10px 24px rgba(0,0,0,.35);
+    }
+    h1{font-size:40px; line-height:1.15; margin:0 0 12px}
+    .muted{color:var(--muted)}
+    .pill{
+      display:inline-flex; gap:8px; align-items:center;
+      padding:6px 10px; border-radius:999px; font-size:12px;
+      border:1px solid rgba(255,255,255,.16);
+      background:linear-gradient(180deg, rgba(255,255,255,.05), rgba(255,255,255,.02));
+    }
+    .grid{display:grid; gap:18px}
+    .grid-3{grid-template-columns:repeat(3,minmax(0,1fr))}
+    .skills .tag{
+      font-size:13px; padding:8px 10px; border-radius:10px;
+      border:1px solid rgba(255,255,255,.12);
+      background:linear-gradient(180deg, rgba(255,255,255,.04), rgba(255,255,255,.01));
+    }
+    footer{padding:28px 0; color:var(--muted); text-align:center}
+    .avatar{
+      aspect-ratio:1/1; width:100%; border-radius:20px; background:
+      linear-gradient(135deg, rgba(91,140,255,.3), rgba(122,240,209,.25)), 
+      url('https://images.unsplash.com/photo-1527980965255-d3b416303d12?q=80&w=1200&auto=format&fit=crop') center/cover no-repeat;
+      border:1px solid rgba(255,255,255,.12);
+      box-shadow: 0 10px 24px rgba(0,0,0,.35);
+    }
+    .section-title{font-size:22px; margin:8px 0 12px}
+    .project-snippet{
+      display:flex; gap:16px; align-items:center; justify-content:space-between
+    }
+    .project-snippet .go{font-size:14px}
+    @media (max-width: 860px){
+      .hero{grid-template-columns:1fr; gap:18px}
+    }
+  </style>
+</head>
+<body>
+  <header>
+    <div class="container nav">
+      <div class="brand">Your Name</div>
+      <nav class="links">
+        <a href="index.html" class="btn">Home</a>
+        <a href="projects.html" class="btn">Projects</a>
+        <a href="#contact" class="btn accent">Contact</a>
+      </nav>
+    </div>
+  </header>
+
+  <main class="container">
+    <section class="hero">
+      <div class="card">
+        <span class="pill">👋 Hello</span>
+        <h1>I'm a Developer who builds clean, fast, delightful web experiences.</h1>
+        <p class="muted">Front‑end focused, full‑stack curious. I turn ideas into responsive, accessible interfaces and ship value quickly.</p>
+        <div style="display:flex; gap:10px; margin-top:10px">
+          <a class="btn accent" href="projects.html">See Projects →</a>
+          <a class="btn" href="#contact">Get in touch</a>
+        </div>
+      </div>
+      <div class="avatar" aria-label="profile image placeholder"></div>
+    </section>
+
+    <section class="card">
+      <h2 class="section-title">About Me</h2>
+      <p class="muted">Briefly introduce yourself: your role, what you love working on, and the value you bring. Keep it 2–3 sentences.</p>
+      <div class="skills" style="margin-top:10px">
+        <div class="grid grid-3">
+          <span class="tag">HTML5</span>
+          <span class="tag">CSS3</span>
+          <span class="tag">JavaScript</span>
+          <span class="tag">React</span>
+          <span class="tag">Node.js</span>
+          <span class="tag">Python</span>
+        </div>
+      </div>
+    </section>
+
+    <section class="card">
+      <h2 class="section-title">Featured Project</h2>
+      <div class="project-snippet">
+        <div>
+          <strong>Smart Portfolio</strong>
+          <p class="muted">A minimal portfolio template with two pages: Home and Projects. Fully responsive with modern styling.</p>
+        </div>
+        <a class="btn go" href="projects.html">Open Projects →</a>
+      </div>
+    </section>
+
+    <section id="contact" class="card">
+      <h2 class="section-title">Contact</h2>
+      <p class="muted">Email: you@example.com · LinkedIn: your-handle · GitHub: your-username</p>
+    </section>
+  </main>
+
+  <footer>
+    © <span id="y"></span> Your Name. All rights reserved.
+  </footer>
+
+  <script>
+    document.getElementById('y').textContent = new Date().getFullYear();
+  </script>
+</body>
+</html>
